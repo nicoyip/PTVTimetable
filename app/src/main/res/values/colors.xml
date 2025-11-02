@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- PTV Transport Colors -->
+    <color name="ptv_train">#3070C7</color>
+    <color name="ptv_tram">#88BC41</color>
+    <color name="ptv_bus">#EF8933</color>
+    <color name="ptv_vline">#832690</color>
+    <color name="ptv_night_bus">#FFFFFF</color>
+    <color name="ptv_background_dark">#333434</color>
+    <color name="ptv_express_green">#88BC41</color>
+    <color name="ptv_disruption_yellow">#F9D748</color>
+</resources>

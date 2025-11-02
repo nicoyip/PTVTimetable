@@ -1,0 +1,21 @@
+{
+  "rules": [
+    "Project is a timeable for public transport app ",
+    "Never use runBlocking",
+    "Don't hardcode dpi",
+    "Use `@SerializedName` for data/retrofit classes because code gets obfuscated",
+    "Follow Material Design 3 guidelines and components",
+    "Use Kotlin coroutines and Flow for asynchronous operations",
+    {
+      "filePathMatches": "**/*.kt",
+      "rulesPaths": "docs/architecture.md"
+    },
+    {
+      "filePathMatches": ["*Test.kt"],
+      "rules": [
+        "Use Kotest framework/BDD for tests",
+        "never use runTest"
+      ]
+    }
+  ]
+}
