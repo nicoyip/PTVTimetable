@@ -3,22 +3,22 @@ package com.example.ptvtimetable.data.models
 import com.google.gson.annotations.SerializedName
 
 data class Stop(
-    @SerializedName("id")
+    @SerializedName("stop_id")
     val id: Int,
-    @SerializedName("label")
-    val label: String,
-    @SerializedName("name")
+    @SerializedName("stop_name")
+    val label: String?,
+    @SerializedName("stop_landmark")
     val name: String?,
     @SerializedName("route_type")
     val routeType: Int
 )
 
 data class Route(
-    @SerializedName("id")
+    @SerializedName("route_id")
     val id: Int,
-    @SerializedName("label")
-    val label: String,
-    @SerializedName("short_label")
+    @SerializedName("route_name")
+    val label: String?,
+    @SerializedName("route_number")
     val shortLabel: String?,
     @SerializedName("route_type")
     val routeType: Int
