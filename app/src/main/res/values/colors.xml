@@ -10,10 +10,15 @@
 
     <!-- PTV Transport Colors -->
     <color name="ptv_train">#3070C7</color>
+    <color name="ptv_train_blue">#3070C7</color>
     <color name="ptv_tram">#88BC41</color>
+    <color name="ptv_tram_green">#88BC41</color>
     <color name="ptv_bus">#EF8933</color>
+    <color name="ptv_bus_orange">#EF8933</color>
     <color name="ptv_vline">#832690</color>
+    <color name="ptv_vline_purple">#832690</color>
     <color name="ptv_night_bus">#FFFFFF</color>
+    <color name="ptv_night_bus_white">#FFFFFF</color>
     <color name="ptv_background_dark">#333434</color>
     <color name="ptv_express_green">#88BC41</color>
     <color name="ptv_disruption_yellow">#F9D748</color>

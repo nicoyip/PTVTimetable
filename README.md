@@ -50,14 +50,30 @@ git clone https://github.com/yourusername/PTVTimetable.git
 cd PTVTimetable
 ```
 
-2. Open in Android Studio
+2. Set up PTV API credentials
+
+Get your free API credentials
+from [PTV Timetable API](https://www.ptv.vic.gov.au/footer/data-and-reporting/datasets/ptv-timetable-api/)
+
+Create or update `local.properties` in the project root with your credentials:
+
+```properties
+# PTV API Credentials
+PTV_DEV_ID=YOUR_DEV_ID_HERE
+PTV_API_KEY=YOUR_API_KEY_HERE
+```
+
+**Important**: Never commit `local.properties` to version control. This file is already in
+`.gitignore`.
+
+3. Open in Android Studio
 
 ```bash
 open -a "Android Studio" .
 ```
 
-3. Sync Gradle dependencies
-4. Build and run on device/emulator
+4. Sync Gradle dependencies
+5. Build and run on device/emulator
 
 ### Setting Up the Widget
 

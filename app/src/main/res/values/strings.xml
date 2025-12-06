@@ -23,6 +23,14 @@
         item
     </string>
 
+    <!-- Departure strings -->
+    <string name="express">Express</string>
+    <string name="platform">Platform %s</string>
+    <string name="loading_departures">Loading departures…</string>
+    <string name="no_departures">No upcoming departures</string>
+    <string name="error_loading_departures">Error loading departures</string>
+    <string name="retry">Retry</string>
+
     <!-- Widget strings -->
     <string name="widget_name">PTV Timetable</string>
     <string name="widget_description">Display upcoming departures for your route</string>

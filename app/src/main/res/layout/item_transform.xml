@@ -1,28 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="4dp"
+    app:cardElevation="2dp"
+    app:cardCornerRadius="12dp">
 
-    <ImageView
-        android:id="@+id/image_view_item_transform"
-        android:layout_width="@dimen/item_transform_image_length"
-        android:layout_height="@dimen/item_transform_image_length"
-        android:layout_margin="8dp"
-        android:contentDescription="@string/image_view_item_transform_content_description"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/text_view_item_transform"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/image_view_item_transform"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="This is item # xx" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:padding="16dp">
+
+        <!-- Route indicator (colored bar) -->
+        <View
+            android:id="@+id/route_indicator"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="?attr/colorPrimary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Route label -->
+        <TextView
+            android:id="@+id/text_route_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/route_indicator"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="86 - Bundoora RMIT" />
+
+        <!-- Platform badge -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_platform"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:minHeight="0dp"
+            android:textSize="12sp"
+            app:chipMinHeight="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/text_route_label"
+            app:layout_constraintStart_toEndOf="@id/text_route_label"
+            app:layout_constraintTop_toTopOf="@id/text_route_label"
+            tools:text="Platform 1" />
+
+        <!-- Express badge -->
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_express"
+            style="@style/Widget.Material3.Chip.Assist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:minHeight="0dp"
+            android:text="@string/express"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:chipBackgroundColor="@color/ptv_express_green"
+            app:chipMinHeight="24dp"
+            app:layout_constraintBottom_toBottomOf="@id/chip_platform"
+            app:layout_constraintStart_toEndOf="@id/chip_platform"
+            app:layout_constraintTop_toTopOf="@id/chip_platform"
+            tools:visibility="visible" />
+
+        <!-- Scheduled time -->
+        <TextView
+            android:id="@+id/text_scheduled_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="?attr/textAppearanceBodyLarge"
+            app:layout_constraintStart_toEndOf="@id/route_indicator"
+            app:layout_constraintTop_toBottomOf="@id/text_route_label"
+            tools:text="3:45 PM" />
+
+        <!-- Minutes until departure (large on right) -->
+        <TextView
+            android:id="@+id/text_minutes_until"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="?attr/textAppearanceHeadlineMedium"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="5 mins" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

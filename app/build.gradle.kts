@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.compose.compiler)
+    alias(libs.plugins.secrets.gradle)
 }
 
 android {
@@ -47,6 +48,14 @@ android {
             it.useJUnitPlatform()
         }
     }
+}
+
+secrets {
+    // Configure which keys should be ignored by the secrets plugin
+    defaultPropertiesFileName = "local.defaults.properties"
+
+    // Add keys that you want to expose in BuildConfig here
+    // They will be available as BuildConfig.PTV_DEV_ID and BuildConfig.PTV_API_KEY
 }
 
 dependencies {
